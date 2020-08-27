@@ -5,7 +5,6 @@ contract FamilyTree{
     int256 familynumber=0;
     mapping (int256 => Family) Familys;
     int256 counter=0;
-    //mapping (int256 => family) single_family;
     struct person{
         string firstname;
         string lastname;
@@ -33,10 +32,6 @@ contract FamilyTree{
     Familys[familynumber] = family;
     counter++;
     }
-    // function print_Family(int256 familynum)public returns(string memory ffirstname, string  memory flastname,string memory mfirstname,string memory mlastname,string memory c1firstname, string  memory c1lastname,string memory c2firstname,string memory c2lastname){
-    // Family memory family = Familys[familynum];
-    // return (family.father.firstname,family.father.lastname,family.mother.firstname,family.father.lastname,family.child1.firstname,family.child1.lastname,family.child2.firstname,family.child2.lastname);
-    // }
     function get_Family_Number()public view returns(int256 familynum){
       return familynumber;
     }
@@ -71,9 +66,6 @@ contract FamilyTree{
     function print_Child2_Last_Name(int256 familynum) public view returns(string memory lastname){
       Family memory family = Familys[familynum];
       return(family.child2.lastname);
-    }
-    function print1()public pure returns(string memory){
-      return "hello";
     }
     function print_Family_Name(int256 familynum) public view returns(string memory firstname){
       Family memory family = Familys[familynum];

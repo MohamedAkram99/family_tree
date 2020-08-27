@@ -1,57 +1,73 @@
 <!DOCTYPE html>
-<html>
 
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gratitude Points</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+    <title>Family tree</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+  	 <link rel="stylesheet" href="styles.css"> 
 </head>
-<h1>Family Tree</h1>
-  <body style="background-color:lightblue;">
-   <div>
+
+
+<h1 class=" scale-up-top badge-danger text-center">Family Tree</h1>
+
+<body class="alert-warning">
+
+
+  <div class="container">
+
     <form >
-    Father First Name:<input type="text" id="ffname"/>
-    Father Last Name: <input type="text" id="flname"/>
-    </br>
-    Mother First Name:<input type="text" id="mfname"/>
-    Motehr Last Name: <input type="text" id="mlname"/>
-    </br>
-    Child1 First Name:<input type="text" id="c1fname"/>
-    Child1 Last Name: <input type="text" id="c1lname"/>
-    </br>
-    Child2 First Name:<input type="text" id="c2fname"/>
-    Child2 Last Name: <input type="text" id="c2lname"/>
-    </br>
-    Family Name: <input  type="text" id="familyname"/>
-    </br></br>
+    Father First Name:<input  type="text" class="form-control add" id="ffname"/>
+    Father Last Name: <input type="text" class="form-control add" id="flname"/>
+    <br> 
+    Mother First Name:<input type="text" class="form-control add" id="mfname"/>
+    Motehr Last Name: <input type="text" class="form-control add" id="mlname"/>
+    <br> 
+    Child1 First Name:<input type="text" class="form-control add" id="c1fname"/>
+    Child1 Last Name: <input type="text" class="form-control add" id="c1lname"/>
+    <br> 
+    Child2 First Name:<input type="text" class="form-control add" id="c2fname"/>
+    Child2 Last Name: <input type="text" class="form-control add" id="c2lname"/>
+    <br>
+    Family Name: <input  type="text" class="form-control add" id="familyname"/>
+    <br><br>
     
-    <button id="AddFamily" type="button" >Add Family</button>
-  </br></br>
-  <button id="ShowFamilyNumber" type="button">Show Family Number</button>
+    <button id="AddFamily" class="btn btn-primary" type="button" >Add Family</button>
+
+  <button id="ShowFamilyNumber" class="btn btn-primary" type="button">Show Family Number</button>
 <label id="Familynum"></label>
-</br></br>
+
+<br><br>
+
 </form>
-<button id="ShowFamily">Show Family</button>
-<input type="text" id="familynumber"/>
+<button id="ShowFamily" class="btn btn-success">Show Family</button>
+
+<input type="text" class="form-control add" id="familynumber"/>
 
     
-
+<br>
+<br>
     
-    <h1> Family </h1>
-    <table border= 1 style="width:100%" id="myTable">
+    <h1 class="text-center"> Family </h1>
+    <table border= 1 style="width:100%" id="myTable" class="table table-dark">
+
+      <thead class="thead-dark">
         <tr>
-	    <td>Family Name</td>
-            <td>Father</td>
-            <td>Mother</td>
-            <td>Child1</td>
-            <td>Child2</td>
+          <th scope="col">Family name</th>
+          <th scope="col">Father</th>
+          <th scope="col">Mother</th>
+          <th scope="col">Child1</th>
+          <th scope="col">Child2</th>
         </tr>
+      </thead>
+
+      
     </table>
    </div>
+
+  </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
